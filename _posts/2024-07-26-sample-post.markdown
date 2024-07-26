@@ -7,4 +7,4 @@ categories: blog
  
 ## This is a test
 
-Hello. This is a test. I'm doing this little experiment with my friend.
+Hello. This is a test. I'm doing this little experiment with my friend. I want to *emphasize* this word.
