@@ -25,6 +25,8 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header and navigation */
@@ -39,10 +41,27 @@ header {
     font-style: normal;
 }
 
-header h1 {
+.header-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-top h1 {
     color: #fff;
-    text-align: center;
     margin-bottom: 0.5em;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-bottom .slogan {
+    color: #fff;
+    margin: 0;
+    font-size: 1.2em;
 }
 
 header nav ul {
