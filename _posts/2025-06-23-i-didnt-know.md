@@ -9,7 +9,7 @@ categories: blog
 
 ## Scene
 
-![Posing as Ashe Outside](../assets/images/20250309_125616.jpg)
+![Posing as Ashe Outside](/assets/images/20250309_125616.jpg)
 
 > “That bow is SICK.” 
 >
@@ -17,7 +17,7 @@ categories: blog
 
 ## Before the Con
 
-![Ashe bathroom selfie](../assets/images/bathroom_selfie.jpg)
+![Ashe bathroom selfie](/assets/images/bathroom_selfie.jpg)
 
 This is what you would've seen walking down the street, riding the subway, stopping for lunch before stepping through a portal into another dimension: the Seattle Convention Center. 
 
@@ -27,7 +27,7 @@ Remember that - because later, that sentiment would change.
 
 ## The High
 
-![Holding the bow at home](../assets/images/big_ass_bow_edit.jpg)
+![Holding the bow at home](/assets/images/big_ass_bow_edit.jpg)
 
 Here are some of the things I heard over the weekend:
 * "How heavy is that bow?!" (me: proceeds to hand it over so they can try)
@@ -53,11 +53,11 @@ I’m even going to practice acting - my cosplay weakness. I can *look* amazing,
 
 ## Now
 
-![Bambu printer printing](../assets/images/printer_screen.jpg)
+![Bambu printer printing](/assets/images/printer_screen.jpg)
 
 I’ve got plans. I’m learning a new skill: 3D printing. And now I’m making this big-ass gun.
 
-![Screenshot of Viper from Overwatch](../assets/images/viper_rifle.webp)
+![Screenshot of Viper from Overwatch](/assets/images/viper_rifle.webp)
 
 I’m becoming Ashe. Again. But this time from Overwatch. The name is just a coincidence - but I like her story. I vibe with her.
 
