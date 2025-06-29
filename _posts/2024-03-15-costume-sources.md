@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Citing my Sources - Patterns, Tools, Materials"
-date:   2025-03-15 00:00:00 -0700
+date:   2025-03-15 00:00:00 
 categories: blog
 ---
 

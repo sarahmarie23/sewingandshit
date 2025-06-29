@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ashe 2.0 - Quiver Build Part 1"
-date:   2025-06-03 00:00:00 -0700
+date:   2025-06-03 00:00:00 
 categories: blog
 ---
 

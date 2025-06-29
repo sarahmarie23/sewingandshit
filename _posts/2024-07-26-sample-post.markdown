@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "This is a test"
-date: 2024-07-26 10:00:00 -0700
+date: 2024-07-26 10:00:00 
 categories: blog
 ---
  
