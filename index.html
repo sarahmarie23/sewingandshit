@@ -10,14 +10,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home">
     <header>
       <div class="container">
+        <!--
         <div class="header-top">
           <h1 class="special-elite-regular">Sewing and Shit</h1>
         </div>
+      -->
         <div class="header-bottom">
-          <p class="slogan">Sewing Outside the Lines</p>
+          <!--<p class="slogan">Cosplay. Chaos. Craft.</p>-->
+          <div class="header-top">Sewing and Shit</div>
           <nav>
             <ul>
               <li><a href="#">Home</a></li>
@@ -31,46 +34,102 @@
     </header>
     <main>
       <section class="intro">
-        <div class="container"></div>
-          <h2>About Us</h2>
-          <p>Why are we even making this shit?</p>
+        <div class="container">
+          <section class="hero">
+            <img src="assets/images/hero_square4.png" alt="Hero image">
+          </section>
+          <h2>Welcome to my Workshop</h2>
+          <p class="subtitle">Where the builds are badass and the bullshit stays outside.</p>
+          <!-- <p class="subtitle">For sewing, crafting, and whatever the hell else I feel like.</p> -->
         </div>
       </section>
 
-      <section class="projects">
-        <div class="container">
-          <h2>Sewing Projects</h2>
-          <p>Beause obviously we are making sewing things.</p>
+      <section class="builds-section">
+        <div class="project-block">
+          <h3>Current Build</h3>
+          <img src="assets/images/Ashe-Overwatch.webp" alt="Overwatch Ashe cosplay" />
+          <p>High-craft build of Ashe from Overwatch. Armor, rifle, and coat in progress.</p>
+          <a href="/blog/ashe-overwatch" class="button">View Progress</a>
+        </div>
 
-          <div class="project">
-            <img src="assets/images/placeholder-image-rect.jpg" alt="Project Image">
-            <h3>Project Title</h3>
-            <p>Brief description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-
-          <div class="project">
-            <img src="assets/images/placeholder-image-square.jpg" alt="Project Image">
-            <h3>Project Title</h3>
-            <p>Brief description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-
+        <div class="project-block">
+          <h3>Other Shit I’m Making</h3>
+          <img src="assets/images/Gale.jpg" alt="Gale from Baldur’s Gate robe" />
+          <p>Gale’s robe from Baldur’s Gate 3. Crafted for my friend because that's what friends do.</p>
+          <a href="/blog/gale-robe" class="button">More on This</a>
         </div>
       </section>
-      
-      <section class="blog">
-        <div class="container">
-          <h2>Latest Blog Posts</h2>
-          <article>
-              <h3>Blog Post Title</h3>
-              <p>Excerpt from the blog post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Read more...</a></p>
+
+      <section class="events-tour">
+        <h2>Upcoming Events</h2>
+        <ul class="tour-list">
+
+          <a href="https://west.paxsite.com/" target="_blank" class="event-row">
+            <li>
+              <span class="event-city">Seattle, WA</span>
+              <span class="event-name">PAX West</span>
+              <span class="event-date">August 2025</span>
+            </li>
+          </a>
+
+          <a href="https://bayarea.makerfaire.com/" target="_blank" class="event-row">
+            <li>
+              <span class="event-city">Mare Island, CA</span>
+              <span class="event-name">Bay Area Maker Faire</span>
+              <span class="event-date">September 2025</span>
+            </li>
+          </a>
+
+          <a href="https://www.emeraldcitycomiccon.com/" target="_blank" class="event-row">
+            <li>
+              <span class="event-city">Seattle, WA</span>
+              <span class="event-name">Emerald City Comic Con</span>
+              <span class="event-date">March 2026</span>
+            </li>
+          </a>
+
+          <a href="https://sakuracon.org/" target="_blank" class="event-row">
+            <li>
+              <span class="event-city">Seattle, WA</span>
+              <span class="event-name">Sakura-Con</span>
+              <span class="event-date">April 2026</span>
+            </li>
+          </a>  
+
+          <a href="https://blizzcon.com/en-us/" target="_blank" class="event-row">
+            <li>
+              <span class="event-city">Anaheim, CA</span>
+              <span class="event-name">BlizzCon</span>
+              <span class="event-date">September 2026</span>
+            </li>
+          </a>  
+        </ul>
+      </section>
+
+      <section class="latest-blog">
+        
+          <h2>Latest Blog Post</h2>
+          {% assign latest_post = site.posts | first %}
+          <article class="blog-preview">
+            <h3><a href="{{ latest_post.url }}">{{ latest_post.title }}</a></h3>
+            <p>{{ latest_post.excerpt }}</p>
+            <a class="read-more" href="{{ latest_post.url }}">Read more…</a>
           </article>
-          <!-- Repeat article for more blog posts -->
+        
+      </section>
+<!---
+      <section class="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <p>I’m Sarah, and this is where I post my cosplay builds, experimental sewing, and the messy parts no one talks about. This site might be ugly at times—just like real WIP—but it’s mine.</p>
+          <p>Follow me on <a href="https://instagram.com/sewingandshit">Instagram</a> for snapshots, or check the <a href="blog/">blog</a> for deep dives.</p>
         </div>
       </section>
+    -->
     </main>
     <footer>
       <div class="container">
-        <p>&copy; 2024 Sewing and Shit</p>
+        <p>&copy; 2025 Sewing and Shit</p>
       </div>
     </footer>
     <script src="scripts.js"></script>
