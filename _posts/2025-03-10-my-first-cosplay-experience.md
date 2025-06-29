@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My First Cosplay Experience"
-date: 2025-03-10 10:00:00 
+date: 2025-03-10
 categories: blog
 ---
 

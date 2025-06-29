@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "I Didn’t Know What to Do With That Much Attention"
-date: 2025-06-23 14:00:00
+date: 2025-06-23
 categories: blog
 # tags: [reflection, cosplay, Ashe, attention, identity]
 ---

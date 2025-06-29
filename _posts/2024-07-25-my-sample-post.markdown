@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My Sample Post"
-date: 2024-07-25 10:00:00 
+date: 2024-07-25
 categories: blog
 ---
 
