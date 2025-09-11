@@ -3,18 +3,23 @@ layout: default
 title: Blog
 ---
 
-<h1>Blog</h1>
+<section class="blog-index container">
+  <h1>Blog</h1>
 
-<ul class="post-list">
-  {% for post in site.posts %}
-    <li class="post-list-item">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p class="date">{{ post.date | date: "%B %-d, %Y" }}</p>
+  <ul class="post-list" role="list">
+    {% for post in site.posts %}
+      <li class="post-card">
+        <h2 class="post-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
 
-      {% capture snippet %}{{ post.excerpt | markdownify | strip_html }}{% endcapture %}
-      <p>{{ snippet | truncate: 200 }}</p>
+        <p class="post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
 
-      <a class="read-more" href="{{ post.url | relative_url }}">Read →</a>
-    </li>
-  {% endfor %}
-</ul>
+        {% capture snippet %}{{ post.excerpt | markdownify | strip_html }}{% endcapture %}
+        <p class="post-excerpt">{{ snippet | truncate: 220 }}</p>
+
+        <a class="btn-read" href="{{ post.url | relative_url }}">Read →</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
