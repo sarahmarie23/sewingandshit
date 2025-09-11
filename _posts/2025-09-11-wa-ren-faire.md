@@ -3,7 +3,7 @@ layout: post
 title: "Washington Midsummer Renaissance Faire 2025"
 date: 2025-09-11
 categories: blog
-# tags: [reflection, cosplay, events]
+tags: [reflection, cosplay, events]
 ---
 
 
