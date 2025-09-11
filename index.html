@@ -1,5 +1,6 @@
 ---
 layout: default
+title: home
 ---
 
 <section class="intro">
@@ -32,22 +33,6 @@ layout: default
 <section class="events-tour">
   <h2>Upcoming Events</h2>
   <ul class="tour-list">
-
-    <a href="https://washingtonfaire.com/" target="_blank" class="event-row">
-      <li>
-        <span class="event-city">Seattle, WA</span>
-        <span class="event-name">Washington Midsummer Renaissance Faire</span>
-        <span class="event-date">August 2025</span>
-      </li>
-    </a>  
-
-    <a href="https://west.paxsite.com/" target="_blank" class="event-row">
-      <li>
-        <span class="event-city">Seattle, WA</span>
-        <span class="event-name">PAX West</span>
-        <span class="event-date">August 2025</span>
-      </li>
-    </a>
 
     <a href="https://bayarea.makerfaire.com/" target="_blank" class="event-row">
       <li>
@@ -82,19 +67,22 @@ layout: default
     </a>  
   </ul>
 </section>
-<!--FIX ME
+
 <section class="latest-blog">
   
     <h2>Latest Blog Post</h2>
     {% assign latest_post = site.posts | first %}
     <article class="blog-preview">
       <h3><a href="{{ latest_post.url }}">{{ latest_post.title }}</a></h3>
-      <p>{{ latest_post.excerpt }}</p>
+      <p class="date">{{ latest_post.date | date: "%B %-d, %Y" }}</p>
+      <!-- <p>{{ latest_post.excerpt }}</p> 
+      Maybe add later after rewording blog first lines 
+      --> 
       <a class="read-more" href="{{ latest_post.url }}">Read more…</a>
     </article>
   
 </section>
--->
+
 
 <!---Do this later too
 <section class="about">
