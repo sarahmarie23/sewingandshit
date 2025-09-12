@@ -30,14 +30,16 @@ Remember that - because later, that sentiment would change.
 ![Holding the bow at home](/assets/images/big_ass_bow_edit.jpg)
 
 Here are some of the things I heard over the weekend:
-* "How heavy is that bow?!" (me: proceeds to hand it over so they can try)
-* "I love your cosplay, can I get a picture?"
-* "Ashe!!!"
-* "My roommate is such an Ashe fan, can I get a picture?"
-* *Shouting from a car window rolled down* "I like your costume, you look great!"
-* "Are you from WoW *(World of Warcraft)*?" (I guess I must’ve looked close enough for the con's cosplay bingo card. But seriously...*do I look like I’m Alliance to you?*)
-* *From professional photographers* "Do you mind if I get some pictures?"
-* *From a child walking by at the bow twice his size* "WHOAA!"
+<ul class="dialogue-list">
+  <li>"How heavy is that bow?!" (me: proceeds to hand it over so they can try)</li>
+  <li>"I love your cosplay, can I get a picture?"</li>
+  <li>"Ashe!!!"</li>
+  <li>"My roommate is such an Ashe fan, can I get a picture?"</li>
+  <li><em>Shouting from a car window rolled down</em> "I like your costume, you look great!"</li>
+  <li>"Are you from WoW <em>(World of Warcraft)</em>?" (I guess I must’ve looked close enough for the con's cosplay bingo card. But seriously...<em>do I look like I’m Alliance to you?</em>)</li>
+  <li><em>From professional photographers</em> "Do you mind if I get some pictures?"</li>
+  <li><em>From a child walking by at the bow twice his size</em> "WHOAA!"</li>
+</ul>
 
 All weekend, I was in a constant state of being seen.
 

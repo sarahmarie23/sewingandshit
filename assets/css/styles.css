@@ -713,3 +713,199 @@ footer p {
   .post-title    { font-size: 1.05rem; }
   .post-excerpt  { font-size: 0.9rem; }
 }
+
+/* ===============================
+  Single post layout 
+================================== */
+
+.post-wrap {
+  max-width: 900px;
+  padding: 2rem 1rem 4rem;
+}
+
+.post-hero {
+  background: #171717;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  box-shadow:
+    0 0 0 1px rgba(255, 62, 165, 0.12),
+    0 8px 20px rgba(0,0,0,.45),
+    0 0 30px rgba(255, 62, 165, 0.08);
+  margin-bottom: 1.25rem;
+}
+
+.post-breadcrumb {
+  display: inline-block;
+  margin-bottom: .35rem;
+  font-size: .9rem;
+  color: #ff58b3;
+  text-decoration: none;
+}
+.post-breadcrumb:hover { text-decoration: underline; }
+
+.post-title {
+  margin: 0 0 .35rem;
+  font-size: 1.55rem;      /* fixed size to avoid “giant hero” */
+  line-height: 1.2;
+  font-weight: 800;
+  color: #fff;
+}
+
+.post-meta {
+  margin: 0;
+  font-size: .9rem;
+  color: #cfcfcf;
+  opacity: .9;
+}
+
+.post-meta .tag {
+  display: inline-block;
+  background: rgba(255, 62, 165, 0.14);
+  color: #ffd9f0;
+  border: 1px solid rgba(255, 62, 165, 0.3);
+  padding: 0 .35rem;
+  border-radius: 8px;
+  margin-left: .25rem;
+}
+
+/* Body content panel */
+.post-body {
+  background: #111;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 6px 22px rgba(0,0,0,.45);
+}
+
+/* Typography inside post body */
+.post-body p {
+  margin: 0 0 1rem;
+  line-height: 1.55;
+  color: #e9e9e9;
+}
+
+.post-body h2, .post-body h3, .post-body h4 {
+  margin: 1.25rem 0 .5rem;
+  line-height: 1.25;
+  color: #fff;
+}
+.post-body h2 { font-size: 1.25rem; }
+.post-body h3 { font-size: 1.1rem; }
+.post-body h4 { font-size: 1rem;  }
+
+.post-body a { color: #ff58b3; }
+.post-body a:hover { text-decoration: underline; }
+
+.post-body ul, .post-body ol {
+  padding-left: 1.25rem;
+  margin: 1rem 0;  
+  line-height: 1.6;
+}
+
+.post-body li {
+  margin: 0.6rem 0;
+  padding-left: 0.5rem;
+  line-height: 1.65rem;
+  border-left: 3px solid #ff3ea5;   /* pink accent */
+  list-style-type: none;            /* hide default bullet */
+}
+
+.post-body ul.dialogue-list {
+  list-style: none;
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+}
+
+.post-body ul.dialogue-list li {
+  margin: 0.6rem 0;
+  padding-left: 0.75rem;
+  border-left: 3px solid #ff3ea5;
+  line-height: 1.6;
+}
+
+.post-body ul.dialogue-list li em {
+  color: #f5b8df;  /* softer pink for speaker emphasis */
+}
+
+.post-body blockquote {
+  margin: 1rem 0;
+  padding: .75rem 1rem;
+  border-left: 3px solid #ff58b3;
+  background: #161616;
+  color: #e5e5e5;
+  border-radius: 8px;
+}
+
+/* Images & captions */
+.post-body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #1f1f1f;
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+  margin: 1rem auto;
+}
+.post-body figure { margin: 1rem 0; }
+.post-body figcaption {
+  text-align: center;
+  font-size: .9rem;
+  color: #c8c8c8;
+  opacity: .9;
+  margin-top: .35rem;
+}
+
+/* Code blocks */
+.post-body pre, .post-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: .95rem;
+}
+.post-body pre {
+  background: #0e0e0e;
+  color: #f3f3f3;
+  border: 1px solid #242424;
+  border-radius: 10px;
+  padding: .9rem 1rem;
+  overflow: auto;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+}
+.post-body code { background: rgba(255,255,255,.06); padding: .1rem .35rem; border-radius: 6px; }
+
+/* Tables */
+.post-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: .95rem;
+}
+.post-body th, .post-body td {
+  border: 1px solid #2a2a2a;
+  padding: .5rem .6rem;
+}
+.post-body th { background: #181818; }
+
+/* Post footer nav */
+.post-footer {
+  margin-top: 1.25rem;
+}
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: .75rem;
+}
+.post-nav-btn {
+  padding: .6rem 1.1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: .95rem;
+  text-decoration: none;
+  background: var(--pink-base, #ff3ea5);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.35);
+  transition: transform .12s ease, background-color .12s ease, box-shadow .12s ease;
+}
+.post-nav-btn:hover,
+.post-nav-btn:focus {
+  background: var(--pink-hover, #e01583);
+  box-shadow: 0 4px 14px rgba(0,0,0,.5), 0 0 0 2px var(--pink-ring, #ff58b3);
+}

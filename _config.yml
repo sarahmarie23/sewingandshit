@@ -57,3 +57,10 @@ collections:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+  - scope:
+      path: ""          # all files
+      type: "posts"
+    values:
+      layout: "post"
