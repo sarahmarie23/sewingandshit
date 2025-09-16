@@ -6,39 +6,60 @@
   <title>{{ page.title | default: site.title }}</title>
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body class="home">
-    <header>
-      <div class="container">
-        <!--
-        <div class="header-top">
-          <h1 class="special-elite-regular">Sewing and Shit</h1>
-        </div>
-      -->
-        <div class="header-bottom">
-          <!--<p class="slogan">Cosplay. Chaos. Craft.</p>-->
-          <div class="header-top">Sewing and Shit</div>
-          <nav>
-            <ul>
-              <li><a href="{{ '/' | relative_url }}">Home</a></li>
-              <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-              <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
-              <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-            </ul>
-          </nav>
-        </div>
+    <!-- before </body> -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Init every .piece-swiper on the page
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.piece-swiper').forEach((el) => {
+        new Swiper(el, {
+          loop: false,
+          spaceBetween: 10,
+          navigation: {
+            nextEl: el.querySelector('.swiper-button-next'),
+            prevEl: el.querySelector('.swiper-button-prev'),
+          },
+          // uncomment if you want dots:
+          // pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
+        });
+      });
+    });
+  </script>
+  <header>
+    <div class="container">
+      <!--
+      <div class="header-top">
+        <h1 class="special-elite-regular">Sewing and Shit</h1>
       </div>
-    </header>
-    <main>
-      {{ content }}
-    </main>
-    <footer>
-      <div class="container">
-        <p>&copy; 2025 Sewing and Shit</p>
+    -->
+      <div class="header-bottom">
+        <!--<p class="slogan">Cosplay. Chaos. Craft.</p>-->
+        <div class="header-top">Sewing and Shit</div>
+        <nav>
+          <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+            <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          </ul>
+        </nav>
       </div>
-    </footer>
+    </div>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Sewing and Shit</p>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<article class="post-wrap container">
+  <header class="post-hero">
+    <a class="post-breadcrumb" href="{{ '/projects/' | relative_url }}">← All Projects</a>
+    <h1 class="post-title">{{ page.title }}</h1>
+
+    <p class="post-meta">
+      {% if page.status %}<strong>{{ page.status | capitalize }}</strong>{% endif %}
+      {% if page.start_date %} • Started: {{ page.start_date | date: "%b %Y" }}{% endif %}
+      {% if page.end_date %} • Finished: {{ page.end_date | date: "%b %Y" }}{% endif %}
+    </p>
+
+    {% if page.cover %}
+      <figure class="build-cover">
+        <img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title }}">
+        {% if page.cover_caption %}<figcaption>{{ page.cover_caption }}</figcaption>{% endif %}
+      </figure>
+    {% endif %}
+
+    {% if page.summary %}<p class="build-intro">{{ page.summary }}</p>{% endif %}
+  </header>
+
+  <section class="post-body">
+    {{ content }}
+  </section>
+</article>

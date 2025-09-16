@@ -909,3 +909,146 @@ footer p {
   background: var(--pink-hover, #e01583);
   box-shadow: 0 4px 14px rgba(0,0,0,.5), 0 0 0 2px var(--pink-ring, #ff58b3);
 }
+
+/* ===============================
+  Builds pages 
+================================== */
+
+/* Build page shells */
+.build-page .card {
+  background: #171717;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0 1.25rem;
+  box-shadow:
+    0 0 0 1px rgba(255, 62, 165, 0.12),
+    0 8px 20px rgba(0,0,0,.45),
+    0 0 30px rgba(255, 62, 165, 0.08);
+}
+
+.build-title { margin: 0 0 .35rem; font-size: 1.55rem; }
+.build-status { margin: 0 0 .75rem; color: #cfcfcf; font-size: .95rem; }
+
+.build-cover { margin: .5rem 0 1rem; }
+.build-cover img { width: 100%; height: auto; border-radius: 12px; border: 2px solid #1f1f1f; }
+.build-cover figcaption { text-align:center; font-size:.9rem; color:#c8c8c8; margin-top:.35rem; }
+
+/* ===== Pieces grid ===== */
+.piece-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 800px) {
+  .piece-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* equal columns */
+    align-items: start;
+  }
+}
+
+/* Each card fills its column */
+.piece {
+  width: 100%;
+  background: #111;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 12px;
+  padding: 1rem;
+  box-sizing: border-box; /* make padding play nice with grid */
+}
+
+/* Media (images, videos, carousels) fill card width */
+.piece .piece-swiper,
+.piece .media-box,
+.piece img,
+.piece video {
+  width: 100%;
+  height: auto;
+  margin-top: .6rem;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover; /* if aspect ratios vary, crops neatly */
+}
+
+
+/* Swiper slides fill the frame neatly */
+.piece .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f0f0f;
+}
+.piece .swiper-slide img,
+.piece .swiper-slide video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;     /* safe even for already-square assets */
+}
+
+/* Swiper container frame */
+.piece .piece-swiper {
+  background: #111;
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+/* Swiper arrows (single definition) */
+.piece .swiper-button-prev,
+.piece .swiper-button-next {
+  color: #ff3ea5;
+  text-shadow: 0 2px 8px rgba(0,0,0,.6);
+}
+.piece .swiper-button-prev:hover,
+.piece .swiper-button-next:hover { color: #e01583; }
+
+/* ===== Other lists/grids (unchanged, but normalized) ===== */
+.fun-list { margin: .5rem 0 0; padding-left: 1.25rem; }
+.fun-list li { margin: .35rem 0; line-height: 1.55; }
+
+.resource-list {
+  list-style: none; padding: 0; margin: .5rem 0 0;
+  display: flex; flex-wrap: wrap; gap: .5rem;
+}
+.resource-list .btn-read { display: inline-block; }
+
+.gallery-grid {
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.gallery-grid img {
+  width: 100%; height: auto; display: block;
+  border-radius: 12px;                     /* <- unify to 12px */
+  border: 2px solid #1f1f1f;
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+}
+
+/* Tiny note */
+.tiny-note { font-size: .85rem; color: #bfbfbf; opacity:.9; margin-top:.5rem; }
+
+/* Match piece media sizing/look */
+.piece .build-media {
+  width: 100%;
+  max-width: 420px;          /* keep consistent with image carousels */
+  margin: .6rem auto 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111;
+  border: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+}
+
+.piece .build-media video {
+  display: block;
+  width: 100%;
+  height: auto;              /* you’re already uploading square */
+  border-radius: 12px;
+}
+
+.piece .build-media figcaption {
+  font-size: .9rem;
+  color: #c8c8c8;
+  text-align: center;
+  padding: .45rem .6rem;
+  background: #171717;
+  border-top: 1px solid rgba(255,255,255,.05);
+}

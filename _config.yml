@@ -60,7 +60,19 @@ collections:
 
 defaults:
   - scope:
-      path: ""          # all files
-      type: "posts"
+      path: ""
+      type: "projects"
     values:
-      layout: "post"
+      layout: "project"    
+      status: "completed" 
+
+collections:
+  posts:
+    output: true
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
