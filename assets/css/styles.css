@@ -22,6 +22,15 @@ body {
   font-style: normal;
 }
 
+/* Make width math sane everywhere */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Images never overflow */
+img, video { max-width: 100%; height: auto; }
+
+/* A shared cap for card widths so they don't sprawl */
+:root { --card-max: 600px; } /* tweak to taste (560–620 works well) */
+
 /* ===============================
    Layout Containers
 ================================== */
@@ -219,15 +228,16 @@ section:last-of-type {
 .blog article,
 .builds-section .project-block {
   background-color: #282828;
-  margin: 1em 0;
+  margin: 1em auto;                 /* center */
   padding: 1.5em;
   border-radius: 8px;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 15px rgba(255, 69, 0, 0.1);
   text-align: center;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+
+  /* key change: explicit width with an upper cap */
+  width: min(92vw, var(--card-max));
+  max-width: none;                  /* let width control it */
 }
 
 .projects .project:hover,
@@ -933,6 +943,46 @@ footer p {
 .build-cover img { width: 100%; height: auto; border-radius: 12px; border: 2px solid #1f1f1f; }
 .build-cover figcaption { text-align:center; font-size:.9rem; color:#c8c8c8; margin-top:.35rem; }
 
+/* Phones: make cards feel lighter and more compact */
+@media (max-width: 799px) {
+  /* global text feels big on mobile when line-height is 1; loosen it a bit */
+  body { line-height: 1.35; }
+
+  /* shrink card chrome */
+  .projects .project,
+  .blog article,
+  .builds-section .project-block,
+  .post-card,
+  .build-page .card,
+  .piece {
+    padding: 0.9rem;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgba(255, 62, 165, 0.10),
+                0 6px 14px rgba(0,0,0,.4);
+  }
+
+  /* keep cards visually narrow even on big phones */
+  :root { --card-max: 380px; }
+
+  /* friendlier type scale inside cards */
+  .projects .project h3,
+  .builds-section .project-block h3,
+  .post-title,
+  .build-title { font-size: 1.25rem; }
+
+  .projects .project p,
+  .builds-section .project-block p,
+  .post-excerpt,
+  .post-body p { font-size: 0.95rem; }
+
+  /* images don’t need extra max-width caps on phones */
+  .projects .project img,
+  .builds-section .project-block img { max-width: 100%; }
+
+  /* blog preview/card paddings */
+  .blog-preview { padding: 1.2rem; }
+}
+
 /* ===== Pieces grid ===== */
 .piece-grid {
   display: grid;
@@ -1051,4 +1101,26 @@ footer p {
   padding: .45rem .6rem;
   background: #171717;
   border-top: 1px solid rgba(255,255,255,.05);
+}
+
+/* Build page: keep individual piece cards narrow on phones */
+@media (max-width: 799px) {
+  /* center items inside the grid */
+  .build-page .piece-grid { justify-items: center; }
+
+  /* cap each piece card's width so it doesn't span the whole viewport */
+  .build-page .piece {
+    width: min(92vw, 400px); 
+    max-width: 380px;      /* try 340–400 to taste */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.9rem;       /* your existing compact padding is great */
+    border-radius: 10px;
+  }
+
+  /* ensure media fills the card neatly (you already have width:100% elsewhere, this is just belt-and-suspenders) */
+  .build-page .piece .media-box,
+  .build-page .piece .piece-swiper,
+  .build-page .piece img,
+  .build-page .piece video { width: 100%; }
 }

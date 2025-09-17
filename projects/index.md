@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Projects
+body_class: projects-page
 permalink: /projects/
 ---
 
