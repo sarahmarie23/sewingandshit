@@ -1179,3 +1179,20 @@ footer p {
     margin: 0 auto;
   }
 }
+.spoiler {
+    background-color: black;
+    color: transparent;
+    border-radius: 3px;
+    padding: 0 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.spoiler:hover {
+    background-color: #222;
+}
+
+.spoiler.revealed {
+    color: #d6c6ff;
+}
