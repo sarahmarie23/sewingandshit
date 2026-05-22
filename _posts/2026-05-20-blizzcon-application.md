@@ -6,7 +6,6 @@ categories: blog
 tags: [xalatath, blizzcon]
 ---
 
-![Cover page](/assets/images/cover-page.png)
 
 I said I was going to apply to the BlizzCon cosplay exhibition. You know, the event where you walk across the stage looking badass without judges meticulously inspecting your seams and paint job under bright lights.
 
@@ -17,6 +16,9 @@ I looked at the rules, and it asked for things like:
 - A timeline explaining how you’ll finish the costume within the next four months
 
 So that’s what I started doing.
+
+![Cover page](/assets/images/cover-page.png)
+*IDK who writes an essay voluntarily*
 
 What began as a few notes turned into a giant Google Doc full of photos, links, timelines, materials, engineering plans, math, repair notes, and enough information for someone else to probably build the cosplay themselves.
 
