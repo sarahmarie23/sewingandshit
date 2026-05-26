@@ -1,13 +1,13 @@
 ---
 title: "Ashe — Overwatch"
-status: "current"               
+status: "completed"               
 start_date: 2025-04-02
 cover: /assets/images/ashe-ow/cover.jpg
 cover_alt: "Ashe cosplay with Viper rifle"
 summary: "Sharp silhouette, Western drama, and an excuse to obsess over the details. This page is the hub for notes, upgrades, and links."
 redirect_from:
   - /builds/ashe-overwatch/     # old path (optional safety net)
-  - /current-build/             # if you ever linked this
+
 ---
 
 <section class="container build-page">
