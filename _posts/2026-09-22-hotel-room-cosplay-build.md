@@ -3,7 +3,7 @@ layout: post
 title: "I Brought Four Bags to BlizzCon and Still Forgot Part of My Costume"
 date: 2026-09-22
 categories: blog
-tags: [blizzcon, xal'atath]
+tags: [blizzcon, xalatath]
 ---
 I brought an unreasonable amount of stuff to California for BlizzCon.
 

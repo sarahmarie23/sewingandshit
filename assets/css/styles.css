@@ -856,6 +856,20 @@ footer p {
   box-shadow: 0 6px 20px rgba(0,0,0,.4);
   margin: 1rem auto;
 }
+
+/* Optional image sizes for blog posts */
+.post-body img.img-small {
+  max-width: 300px;
+}
+
+.post-body img.img-medium {
+  max-width: 450px;
+}
+
+.post-body img.img-large {
+  max-width: 650px;
+}
+
 .post-body figure { margin: 1rem 0; }
 .post-body figcaption {
   text-align: center;
