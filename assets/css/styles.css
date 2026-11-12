@@ -849,7 +849,8 @@ footer p {
 /* Images & captions */
 .post-body img {
   display: block;
-  max-width: 100%;
+  width: auto;
+  max-width: min(100%, 500px);
   height: auto;
   border-radius: 10px;
   border: 2px solid #1f1f1f;
@@ -857,26 +858,82 @@ footer p {
   margin: 1rem auto;
 }
 
-/* Optional image sizes for blog posts */
+
+/* ===== Responsive blog photos ===== */
+
+/* Individual image sizes */
 .post-body img.img-small {
+  width: 100%;
   max-width: 300px;
 }
 
 .post-body img.img-medium {
+  width: 100%;
   max-width: 450px;
 }
 
 .post-body img.img-large {
+  width: 100%;
   max-width: 650px;
 }
 
-.post-body figure { margin: 1rem 0; }
-.post-body figcaption {
+/* Keep captions close to their images */
+.post-body figure {
+  margin: 1.5rem auto;
+}
+
+.post-body figure img {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+
+
+/* Consistent captions for all blog photos */
+.post-body figure figcaption {
+  display: block;
   text-align: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
+  font-style: italic;
   color: #c8c8c8;
-  opacity: .9;
-  margin-top: .35rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  max-width: 450px;
+  margin: 0.5rem auto 0;
+}
+
+/* Keep the photo and caption together */
+.post-body figure {
+  margin: 1.5rem auto;
+}
+
+.post-body figure > img {
+  margin-bottom: 0;
+}
+
+/* Two images side by side */
+.post-body .photo-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 650px;
+  margin: 1.5rem auto;
+  align-items: start;
+}
+
+.post-body .photo-pair img {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+/* Mobile: stack the two photos */
+@media (max-width: 600px) {
+  .post-body .photo-pair {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
 }
 
 /* Code blocks */
@@ -1209,4 +1266,30 @@ footer p {
 
 .spoiler.revealed {
     color: #d6c6ff;
+}
+
+
+/* Responsive side-by-side blog images */
+.post-body .photo-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 650px;
+  margin: 1rem auto;
+}
+
+.post-body .photo-pair img {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  margin: 0;
+}
+
+/* Stack vertically on mobile */
+@media (max-width: 600px) {
+  .post-body .photo-pair {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
 }
