@@ -1235,21 +1235,8 @@ footer p {
   }
 }
 
-/* PHONE: keep it narrow */
-@media (max-width: 480px) {
-  .build-page .piece {
-    width: min(92vw, 380px);
-    margin: 0 auto;
-  }
-}
-
-/* SMALL TABLET: allow wider, but not full-bleed */
-@media (min-width: 481px) and (max-width: 799px) {
-  .build-page .piece {
-    width: min(92vw, 560px);   /* try 520–580px to taste */
-    margin: 0 auto;
-  }
-}
+/* Mobile piece sizing is handled in the consolidated overrides below.
+   Avoid viewport-width pieces inside already padded parent cards. */
 .spoiler {
     background-color: black;
     color: transparent;
@@ -1291,5 +1278,83 @@ footer p {
   .post-body .photo-pair {
     grid-template-columns: 1fr;
     max-width: 350px;
+  }
+}
+/* =======================================
+   Build pages: consolidated mobile fixes
+   (Ashe and future Xal'atath pages)
+======================================= */
+@media (max-width: 799px) {
+  /* Keep enough room for readable paragraphs without touching other pages. */
+  .container.build-page {
+    width: calc(100% - 24px);
+    max-width: 100%;
+    margin-inline: auto;
+    min-width: 0;
+  }
+
+  .build-page .build-hero,
+  .build-page .card,
+  .build-page .piece-grid,
+  .build-page .piece,
+  .build-page .media-box,
+  .build-page .piece-swiper {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .build-page .card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .build-page .piece-grid {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0;
+    margin: 0;
+  }
+
+  .build-page .piece {
+    width: 100%;
+    margin: 0;
+    padding: 0.85rem;
+  }
+
+  /* Swiper's internal track needs to be able to shrink inside the card. */
+  .build-page .piece .piece-swiper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .build-page .piece .swiper-wrapper,
+  .build-page .piece .swiper-slide {
+    min-width: 0;
+  }
+
+  .build-page .piece .media-box img,
+  .build-page .piece .piece-swiper img,
+  .build-page .piece .build-media video,
+  .build-page .friend-pic img,
+  .build-page .build-cover img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Keep the pink list accent without an extra level of indentation. */
+  .build-page .fun-list {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .build-page .fun-list li {
+    padding-left: 0.75rem;
+    margin: 0.75rem 0;
+    line-height: 1.55;
+  }
+
+  .build-page p,
+  .build-page li {
+    overflow-wrap: break-word;
   }
 }
