@@ -936,6 +936,28 @@ footer p {
   }
 }
 
+
+/* Photo pairs with different image orientations */
+.post-body .photo-pair.mixed-pair {
+  align-items: center;
+}
+
+.post-body .photo-pair.mixed-pair img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background: #171717;
+}
+
+/* Mobile: stack with natural image proportions */
+@media (max-width: 600px) {
+  .post-body .photo-pair.mixed-pair img {
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+  }
+}
+
 /* Code blocks */
 .post-body pre, .post-body code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
